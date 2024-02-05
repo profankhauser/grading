@@ -1,3 +1,5 @@
+import * as actions from "../../actions.js";
+
 export default class GradingScreenMainTopbar extends HTMLElement {
   constructor(state) {
     super();
@@ -36,7 +38,7 @@ export default class GradingScreenMainTopbar extends HTMLElement {
 
     // open action
     const openAction = this._newAction("Open", () => {
-      //this._state.newEvaluation();
+      actions.openFile(this._state);
     });
     right.appendChild(openAction);
 

@@ -1,11 +1,12 @@
 {
   "config": {
-    "scale": [50, 95]
+    "percentForGrade1": 95,
+    "percentForGrade4": 50
   },
   "blocks": [
     {
       "type": "text",
-      "text": "## Databases 1: Evaluation\\nHello"
+      "text": "## Databases 1: Evaluation\n\nLoaded!"
     },
     {
       "type": "slider",

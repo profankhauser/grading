@@ -6,16 +6,23 @@ export const boot = (state) => {
   if (!doc) {
     doc = defaultDoc;
   }
-  state.data.doc = doc;
-
-  // calculate
-  recalculateScale(state);
-  recalculateResult(state);
 
   // recalculate on point changes
   state.addEventListener("block-points-changed", () => {
     recalculateResult(state);
   });
+
+  // load
+  loadDoc(state, doc);
+};
+
+const loadDoc = (state, doc) => {
+  // set as doc
+  state.data.doc = doc;
+
+  // calculate
+  recalculateScale(state);
+  recalculateResult(state);
 
   // setup main screen and show
   state.data.screen = "main";
@@ -211,4 +218,30 @@ const roundedGrade = (scale, percent) => {
 
 const roundedPercent = (scale, points) => {
   return Math.round((points / scale.pointsMax) * 100);
+};
+
+export const openFile = (state) => {
+  // create file input
+  const input = document.createElement("input");
+  input.setAttribute("type", "file");
+  input.setAttribute("accept", "application/json");
+
+  // handle file read
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    const doc = JSON.parse(reader.result);
+    loadDoc(state, doc);
+  });
+
+  // handle file selected
+  input.addEventListener("change", () => {
+    if (input.files.length !== 1) {
+      return;
+    }
+    const file = input.files[0];
+    reader.readAsText(file, "utf-8");
+  });
+
+  // open dialog
+  input.click();
 };
