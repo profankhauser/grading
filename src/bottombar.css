@@ -1,0 +1,68 @@
+.bottombar-Bottombar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  justify-content: center;
+  border-top: 1px solid #e0e0e0;
+  background-color: #ffffff;
+}
+
+@media print {
+  .bottombar-Bottombar {
+    display: none !important;
+  }
+}
+
+.bottombar-Bottombar_Evaluator {
+  height: 54px;
+}
+
+.bottombar-Row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.bottombar-Page {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottombar-Bar {
+  display: block;
+  height: 6px;
+  width: 100%;
+}
+
+.bottombar-Title {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.bottombar_SummaryItem {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.bottombar_SummaryItemTitle {
+  color: var(--gray1);
+  font-size: 0.8em;
+}
+
+.bottombar_SummaryItemValue {
+  font-size: 1.1em;
+  font-weight: 600;
+}

@@ -1,0 +1,18 @@
+export default {
+  palette1: "#ee2e24",
+  palette2: "#f15123",
+  palette3: "#f37423",
+  palette4: "#f69722",
+  palette5: "#f8ba22",
+  palette6: "#fbdd21",
+  palette7: "#fcee21",
+  palette8: "#d9e428",
+  palette9: "#c7de2c",
+  palette10: "#b5d930",
+  palette11: "#a3d434",
+  palette12: "#92cf37",
+  palette13: "#80ca3b",
+  palette14: "#6ec53f",
+  palette15: "#5cbf43",
+  palette16: "#4bba46",
+};

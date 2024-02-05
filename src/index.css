@@ -1,0 +1,103 @@
+@import "app/app.css";
+@import "tool/tool.css";
+@import "blocks/blocks.css";
+@import "topbar.css";
+@import "bottombar.css";
+
+/* check https://ecss.benfrain.com/chapter5.html for naming */
+/* .namespace-ModuleOrComponent_ChildNode-variant {} */
+
+/* font */
+@font-face {
+  font-family: "Inter var";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/Inter-roman.var.woff2?v=3.19") format("woff2");
+  font-named-instance: "Regular";
+}
+
+@font-face {
+  font-family: "Inter var";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/Inter-italic.var.woff2?v=3.19") format("woff2");
+  font-named-instance: "Italic";
+}
+:root {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root,
+  button {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+/* vars */
+:root {
+  --primary: #0085f2;
+  --primary1: #0276d5;
+  --gray1: #4f4f4f;
+  --palette1: #ee2e24;
+  --palette2: #f15123;
+  --palette3: #f37423;
+  --palette4: #f69722;
+  --palette5: #f8ba22;
+  --palette6: #fbdd21;
+  --palette7: #fcee21;
+  --palette8: #d9e428;
+  --palette9: #c7de2c;
+  --palette10: #b5d930;
+  --palette11: #a3d434;
+  --palette12: #92cf37;
+  --palette13: #80ca3b;
+  --palette14: #6ec53f;
+  --palette15: #5cbf43;
+  --palette16: #4bba46;
+}
+
+/* resets */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+svg {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  backface-visibility: hidden;
+}
+
+/* headings */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+/* print page */
+@page {
+  size: A4;
+  margin: 2cm;
+}

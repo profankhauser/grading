@@ -1,0 +1,39 @@
+.block-Block {
+  border: 1px solid black;
+  margin-bottom: 14px;
+}
+
+.block-Grade_Summary {
+  display: flex;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.block-Grade_Table {
+  margin-top: 36px;
+}
+
+.block-Grade_Graph {
+  margin-top: 36px;
+}
+
+.block-Grade_SummaryItem {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.block-Grade_SummaryItemTitle {
+  color: var(--gray1);
+  font-size: 0.8em;
+}
+
+.block-Grade_SummaryItemValue {
+  font-size: 1.3em;
+  font-weight: 600;
+}
