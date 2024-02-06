@@ -295,3 +295,32 @@ export const saveFile = (state) => {
 export const copyURLToClipboard = (state) => {
   navigator.clipboard.writeText(window.location.href);
 };
+
+// creates a new block
+const BLOCK_TEMPLATES = {
+  text: {
+    type: "text",
+    text: "## New Text Block\n\n\nPlease add some text here ...",
+  },
+  slider: {
+    type: "slider",
+    text: "## New Slider Block\n\n\nPlease add some text here ...",
+    points: 0,
+    pointsMax: 10,
+  },
+  grade: {
+    type: "grade",
+    text: "## New Grade Block\n\n\nPlease add some text here ...",
+  },
+};
+export const addBlockToDoc = (state, index, type) => {
+  // clone new block from template type
+  const newBlock = JSON.parse(JSON.stringify(BLOCK_TEMPLATES[type]));
+
+  // insert into doc at index
+  // 0
+  state.data.doc.blocks.splice(index, 0, newBlock);
+
+  // reload doc
+  loadDoc(state, state.data.doc);
+};

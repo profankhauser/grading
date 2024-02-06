@@ -220,3 +220,54 @@
     visibility: collapse;
   }
 }
+
+.tool-Dropdown {
+  position: relative;
+}
+
+.tool-Dropdown_Background {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vw;
+}
+
+.tool-Dropdown_Frame {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.tool-Dropdown_Panel {
+  width: 200px;
+  color: white;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0px 3px 8px #dedede;
+  background-color: var(--primary);
+  margin-top: 6px
+}
+
+.tool-Dropdown_Button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.tool-Dropdown_ButtonText {
+  padding: 8px 8px;
+  color: white;
+}
+.tool-Dropdown_ButtonText:hover {
+  background-color: var(--primary1);
+}
