@@ -1,5 +1,11 @@
 .block-Block {
-  margin: 36px 0;
+  margin: 24px 0;
+}
+
+@media print {
+  .block-Block {
+    margin: 36px 0;
+  }
 }
 
 .block-Grade_Summary {
