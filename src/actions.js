@@ -2,8 +2,18 @@ import defaultDoc from "../docs/default.json.js";
 
 export const boot = (state) => {
   // recalculate on point changes
-  state.addEventListener("block-points-changed", () => {
+  state.addEventListener("block-result-changed", () => {
     recalculateResult(state);
+  });
+
+  // update url when result changed
+  state.addEventListener("result-changed", () => {
+    updateDocInURL(state);
+  });
+
+  // update url when scale changed
+  state.addEventListener("scale-changed", () => {
+    updateDocInURL(state);
   });
 
   // load doc from URL or default
@@ -64,6 +74,14 @@ const stringifyJSONAndEncode = (data) => {
   const bytes = new TextEncoder().encode(text);
   const binString = String.fromCodePoint(...bytes);
   return btoa(binString);
+};
+
+const updateDocInURL = (state) => {
+  let newHash = stringifyJSONAndEncode(state.data.doc);
+  let currentHash = window.location.hash.substring(1);
+  if (newHash !== currentHash) {
+    history.pushState(null, null, document.location.pathname + "#" + newHash);
+  }
 };
 
 // calculate the full grading scale with buckets, etc.
@@ -264,11 +282,16 @@ export const saveFile = (state) => {
   // create tmp link to dowload the object from the url
   const link = document.createElement("a");
   link.href = url;
-  link.download = "grading-doc.json";
+  link.download = "grading.json";
   link.target = "_blank";
   link.click();
 
   // cleanup
   URL.revokeObjectURL(url);
   link.remove();
+};
+
+// copies the current url to the clipboard
+export const copyURLToClipboard = (state) => {
+  navigator.clipboard.writeText(window.location.href);
 };

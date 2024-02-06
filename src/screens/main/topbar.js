@@ -54,6 +54,12 @@ export default class GradingScreenMainTopbar extends HTMLElement {
     });
     right.appendChild(resetAction);
 
+    // copy url to clipboard action
+    const copyURLAction = this._newAction("Copy URL", () => {
+      actions.copyURLToClipboard(this._state);
+    });
+    right.appendChild(copyURLAction);
+
     // print
     const printAction = this._newAction("Create PDF", () => {
       window.print();

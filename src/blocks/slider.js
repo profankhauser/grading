@@ -28,7 +28,7 @@ export default class GradingBlockSlider extends HTMLElement {
     );
     points.addEventListener("value-changed", (event) => {
       this._block.points = event.detail;
-      this._state.dispatchEvent("block-points-changed");
+      this._state.dispatchEvent("block-result-changed");
     });
     this.appendChild(points);
   }
