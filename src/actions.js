@@ -220,6 +220,7 @@ const roundedPercent = (scale, points) => {
   return Math.round((points / scale.pointsMax) * 100);
 };
 
+// opens a file from a local device and loads it as a doc
 export const openFile = (state) => {
   // create file input
   const input = document.createElement("input");
@@ -231,6 +232,7 @@ export const openFile = (state) => {
   reader.addEventListener("load", () => {
     const doc = JSON.parse(reader.result);
     loadDoc(state, doc);
+    input.remove();
   });
 
   // handle file selected
@@ -244,4 +246,23 @@ export const openFile = (state) => {
 
   // open dialog
   input.click();
+};
+
+// saves the current doc to a file by download
+export const saveFile = (state) => {
+  // stringify doc and create an object url for it
+  const data = JSON.stringify(state.data.doc, null, 2);
+  const blob = new Blob([data], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+
+  // create tmp link to dowload the object from the url
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "grading-doc.json";
+  link.target = "_blank";
+  link.click();
+
+  // cleanup
+  URL.revokeObjectURL(url);
+  link.remove();
 };

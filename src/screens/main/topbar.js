@@ -43,10 +43,10 @@ export default class GradingScreenMainTopbar extends HTMLElement {
     right.appendChild(openAction);
 
     // save action
-    const exportAction = this._newAction("Export", () => {
-      //this._state.newEvaluation();
+    const saveAction = this._newAction("Save", () => {
+      actions.saveFile(this._state);
     });
-    right.appendChild(exportAction);
+    right.appendChild(saveAction);
 
     // reset action
     const resetAction = this._newAction("Reset", () => {
