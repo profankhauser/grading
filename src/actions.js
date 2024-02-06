@@ -1,17 +1,17 @@
 import defaultDoc from "../docs/default.json.js";
 
 export const boot = (state) => {
-  // load doc from URL or default
-  let doc = fetchDocFromURL();
-  if (!doc) {
-    doc = defaultDoc;
-  }
-
   // recalculate on point changes
   state.addEventListener("block-points-changed", () => {
     recalculateResult(state);
   });
 
+  // load doc from URL or default
+  let doc = fetchDocFromURL();
+  if (!doc) {
+    // clone default doc
+    doc = JSON.parse(JSON.stringify(defaultDoc));
+  }
   // load
   loadDoc(state, doc);
 };
@@ -27,6 +27,12 @@ const loadDoc = (state, doc) => {
   // setup main screen and show
   state.data.screen = "main";
   state.dispatchEvent("screen-changed");
+};
+
+export const reset = (state) => {
+  // clone
+  const doc = JSON.parse(JSON.stringify(defaultDoc));
+  loadDoc(state, doc);
 };
 
 // parse state from url

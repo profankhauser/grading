@@ -50,7 +50,7 @@ export default class GradingScreenMainTopbar extends HTMLElement {
 
     // reset action
     const resetAction = this._newAction("Reset", () => {
-      //this._state.newEvaluation();
+      actions.reset(this._state);
     });
     right.appendChild(resetAction);
 
