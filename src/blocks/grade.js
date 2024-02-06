@@ -1,3 +1,4 @@
+import GradingToolMarkdownArea from "../tool/markdown-area.js";
 import GradingToolScaleGraph from "../tool/scale-graph.js";
 import GradingToolScaleTable from "../tool/scale-table.js";
 
@@ -10,6 +11,14 @@ export default class GradingBlockGrade extends HTMLElement {
 
   connectedCallback() {
     this.classList.add("block-Block", "block-Block_Grade");
+
+    // text
+    let text = new GradingToolMarkdownArea(this._block.text);
+    text.addEventListener("content-changed", (event) => {
+      this._block.text = event.detail;
+      this._state.dispatchEvent("block-text-changed");
+    });
+    this.appendChild(text);
 
     // summary
     const summary = document.createElement("div");
