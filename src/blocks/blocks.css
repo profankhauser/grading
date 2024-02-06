@@ -1,12 +1,13 @@
 .block-Block {
-  border: 1px solid black;
-  margin-bottom: 14px;
+  margin: 36px 0;
 }
 
 .block-Grade_Summary {
   display: flex;
   border-top: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
+  margin-top: 24px;
+  background-color: #fcfcfc;
 }
 
 .block-Grade_Table {
@@ -36,4 +37,8 @@
 .block-Grade_SummaryItemValue {
   font-size: 1.3em;
   font-weight: 600;
+}
+
+.block-Block_SliderRange {
+  margin-top: 24px;
 }

@@ -9,7 +9,7 @@ export default class GradingBlockSlider extends HTMLElement {
   }
 
   connectedCallback() {
-    this.classList.add("block-Block", "block-Block_Slider");
+    this.classList.add("block-Block");
 
     // text
     let text = new GradingToolMarkdownArea(this._block.text);
@@ -26,6 +26,7 @@ export default class GradingBlockSlider extends HTMLElement {
       this._block.points,
       "points"
     );
+    points.classList.add("block-Block_SliderRange");
     points.addEventListener("value-changed", (event) => {
       this._block.points = event.detail;
       this._state.dispatchEvent("block-result-changed");

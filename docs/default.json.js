@@ -10,7 +10,7 @@ export default {
     },
     {
       type: "slider",
-      text: "## Project Pitch\nVery nice",
+      text: "## Project Pitch\n\nVery nice",
       points: 10,
       pointsMax: 10,
     },

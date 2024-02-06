@@ -1,5 +1,6 @@
 .tool-MarkdownArea {
   display: block;
+  cursor: text;
 }
 
 .tool-MarkdownArea_Viewer {
@@ -84,6 +85,11 @@
   width: 100%;
   font-family: monospace;
   font-size: 1.3em;
+  background-color: rgb(30 41 59);
+  color: white;
+  color: rgb(248 250 252);
+  padding: 12px;
+  border-radius: 6px;
 }
 
 .tool-Range {

@@ -34,7 +34,10 @@ export default class GradingToolMarkdownArea extends HTMLElement {
 
     editor.addEventListener("focusout", () => {
       // update viewer
-      let newText = editor.innerText;
+      let newText = editor.innerText.trim();
+      if (newText == "") {
+        newText = "-";
+      }
       viewer.innerHTML = this._converter.makeHtml(newText);
       editor.replaceWith(viewer);
 

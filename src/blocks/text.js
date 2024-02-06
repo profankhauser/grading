@@ -8,7 +8,7 @@ export default class GradingBlockText extends HTMLElement {
   }
 
   connectedCallback() {
-    this.classList.add("block-Block", "block-Block_Text");
+    this.classList.add("block-Block");
 
     // text
     let text = new GradingToolMarkdownArea(this._block.text);
