@@ -31,28 +31,28 @@ export default class GradingScreenMainTopbar extends HTMLElement {
     });
     left.appendChild(title);
 
-    // right
-    const right = document.createElement("div");
-    right.classList.add("topbar-Right");
-    page.appendChild(right);
-
     // open action
     const openAction = this._newAction("Open", () => {
       actions.openFile(this._state);
     });
-    right.appendChild(openAction);
+    left.appendChild(openAction);
 
     // save action
     const saveAction = this._newAction("Save", () => {
       actions.saveFile(this._state);
     });
-    right.appendChild(saveAction);
+    left.appendChild(saveAction);
 
     // reset action
     const resetAction = this._newAction("Reset", () => {
       actions.reset(this._state);
     });
-    right.appendChild(resetAction);
+    left.appendChild(resetAction);
+
+    // right
+    const right = document.createElement("div");
+    right.classList.add("topbar-Right");
+    page.appendChild(right);
 
     // copy url to clipboard action
     const copyURLAction = this._newAction("Copy URL", () => {
