@@ -15,6 +15,11 @@
   margin-top: 0;
 }
 
+.tool-MarkdownArea_Viewer strong {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
 .tool-MarkdownArea_Viewer h1 {
   margin-bottom: 16px;
   letter-spacing: -0.025em;
@@ -59,6 +64,10 @@
   margin-top: 0;
   margin-bottom: 16px;
   padding-left: 32px;
+}
+
+.tool-MarkdownArea_Viewer li {
+  margin-bottom: 8px;
 }
 
 .tool-MarkdownArea_Viewer table {

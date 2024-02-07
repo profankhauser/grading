@@ -24,6 +24,15 @@ export default class GradingToolMarkdownArea extends HTMLElement {
     let editor = document.createElement("div");
     editor.classList.add("tool-MarkdownArea_Editor");
     editor.contentEditable = true;
+    // paste as plaintext only
+    editor.addEventListener("paste", (event) => {
+      event.preventDefault();
+      document.execCommand(
+        "inserttext",
+        false,
+        event.clipboardData.getData("text/plain")
+      );
+    });
 
     // interaction
     viewer.addEventListener("click", () => {

@@ -6,27 +6,33 @@ export default {
   blocks: [
     {
       type: "text",
-      text: "## Databases 1: Evaluation\n\n\nHello",
+      text: "## Project Evaluation\n\n### Course\n12345 Coursename\n\n### Students\n\nJane Doe\njane@university.org\n\nJohn Doe\njohn@university.org\n\n### Project\nprojectname\n\n### Repository\nhttps://github.com/profankhauser/grading\n\n### Date\n01.01.2040",
     },
     {
       type: "slider",
-      text: "## Project Pitch\n\nVery nice",
-      points: 10,
+      text: "## Pitch\n\nA good project pitch presentation should be concise, engaging, and informative, effectively communicating the value and feasibility of your project. \n\n\nHere's a short guide on crafting a compelling pitch:\n\n\n- **Start with a Hook**: Begin with a compelling statement or question that grabs attention. This could be a surprising fact, a provocative question, or a brief story related to your project's theme.\n\n- **Introduce the Problem**: Clearly define the problem your project addresses. Make sure the audience understands why this problem is important and relevant to them or society at large.\n\n- **Present Your Solution**: Describe your project's solution to the problem. Highlight what makes your approach unique and superior to existing solutions. Use simple, jargon-free language to make it accessible to all attendees.\n\n\nRemember, the goal of a project pitch is not just to inform, but to persuade. Your enthusiasm for the project should shine through, convincing your audience of its value and your ability to deliver it successfully.\n\n\n### Checklist\n\n- [] All team members are presenting\n- [] Team introduces itself\n- [] Pitch starts with a hook\n- [] Problem is introduced in an understandable fashion\n- [] Proposed solution is presented\n- [] Presentation is not too long nor short \n\n### Feedback\nTbd",
+      points: 0,
       pointsMax: 10,
     },
     {
       type: "slider",
-      text: "## Presentation",
-      points: 4,
-      pointsMax: 15,
+      text: "## Planning and Organization\n\n\nEffective IT project planning is an iterative process that requires flexibility, clear communication, and constant monitoring.\n\n\nThe following steps can help to improve planning and organization:\n\n- **Define Project Scope and Objectives**: Clearly outline what the project aims to achieve and its boundaries. This includes specifying the deliverables, features, and functionalities expected upon completion.\n\n- **Setup Work Packages**: Break down the project into smaller, manageable tasks and subtasks. This helps in organizing the team's work and makes it easier to assign responsibilities, estimate costs, and allocate resources effectively.\n\n- **Create a Project Schedule**: Develop a timeline that includes all project tasks, their duration, dependencies, and deadlines. Utilize project management tools to visualize the schedule, such as Gantt charts, to keep everyone on track.\n\n- **Allocate Resources**: Identify the resources required for each task, including personnel, technology, and materials. Assign tasks to team members based on their skills and availability, ensuring resources are used efficiently.\n\n- **Review and Adjust**: Regularly review the project's progress against its objectives and schedule. Be prepared to make adjustments to the plan as needed to address challenges or changes in project scope.\n\n\n### Checklist\n- [] Work packages are setup\n- [] Project schedule is defined and updated\n- [] Issues for features are created and maintained\n- [] Source code is developed in feature branches referencing an issue\n- [] Merge requests are used to pull in code from feature branches\n\n\n### Feedback\nTbd",
+      points: 0,
+      pointsMax: 10,
+    },
+    {
+      type: "slider",
+      text: "## Final Presentation\n\nAdapting your final presentation to follow up on your project pitch creates a narrative of progress and achievement. It demonstrates your commitment to the project, the evolution of your ideas, and your responsiveness to challenges and opportunities.\n\nHere's how you can adapt the presentation to build upon the initial pitch:\n\n- **Short Recap of the Pitch**: Start by briefly recapping the main points of your initial project pitch, including the problem you set out to solve and the solution you proposed. This reminds the audience of the project's context and how your final presentation connects to your initial vision.\n\n- **Progress Overview**: Highlight the journey from pitch to final product. Discuss key milestones, progress made, and how feedback or discoveries along the way shaped the project's direction. This demonstrates adaptability and the iterative nature of your work.\n\n- **Methodology and Implementation**: Detail the methods and processes used to turn your pitch into reality. Emphasize any innovative approaches or techniques employed, and how they contributed to achieving your project goals.\n\n- **Results and Achievements**: Present the outcomes of your project, focusing on how they meet or exceed the expectations set during your pitch. Use compelling visuals and data to showcase your successes and the impact of your work.\n\n- **Learnings and Challenges**: Share key learnings and challenges encountered throughout the project. Discuss how challenges were addressed, showcasing your problem-solving capabilities and resilience.\n\n- **Q&A and Engagement**: Engage with your audience by inviting questions, seeking feedback, and discussing potential applications of your work. This fosters a dialogue and shows your commitment to the project beyond the presentation.\n\nThis approach not only informs but also engages your audience, leaving a lasting impression of your project's value and your capabilities.\n\n\n### Checklist\n- [] All team members are presenting\n- [] Team introduces itself\n- [] Pitch is recapped\n- [] Journey from pitch to product is presented\n- [] Some implementation details are shared\n- [] Results are demonstrated\n- [] Learnings are highlighted\n- [] Audience is engaged by team\n\n\n### Feedback\nTbd",
+      points: 0,
+      pointsMax: 10,
     },
     {
       type: "grade",
-      text: "## Grade",
+      text: "## Grade\n\n\nThis results in the following grade:",
     },
     {
       type: "text",
-      text: "With best regards,\nProf. Dr. Thomas Fankhauser",
+      text: "With best regards,\nYour Signature",
     },
   ],
 };
