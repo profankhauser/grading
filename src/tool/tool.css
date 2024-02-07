@@ -17,6 +17,7 @@
 
 .tool-MarkdownArea_Viewer h1 {
   margin-bottom: 16px;
+  letter-spacing: -0.025em;
 }
 .tool-MarkdownArea_Viewer h1::before {
   content: "# ";
@@ -26,6 +27,7 @@
 .tool-MarkdownArea_Viewer h2 {
   margin-top: 32px;
   margin-bottom: 16px;
+  letter-spacing: -0.025em;
 }
 .tool-MarkdownArea_Viewer h2::before {
   content: "## ";
@@ -35,14 +37,12 @@
 .tool-MarkdownArea_Viewer h3 {
   margin-top: 32px;
   margin-bottom: 8px;
+  letter-spacing: -0.025em;
 }
 
 .tool-MarkdownArea_Viewer h4 {
   margin-bottom: 16px;
-}
-.tool-MarkdownArea_Viewer h4::before {
-  content: "#### ";
-  color: var(--primary);
+  letter-spacing: -0.025em;
 }
 
 .tool-MarkdownArea_Viewer p {
@@ -223,6 +223,8 @@
 
 .tool-Dropdown {
   position: relative;
+  display: flex;
+  min-width: 200px;
 }
 
 .tool-Dropdown_Background {

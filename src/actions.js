@@ -313,13 +313,42 @@ const BLOCK_TEMPLATES = {
     text: "## New Grade Block\n\n\nPlease add some text here ...",
   },
 };
+
 export const addBlockToDoc = (state, index, type) => {
   // clone new block from template type
   const newBlock = JSON.parse(JSON.stringify(BLOCK_TEMPLATES[type]));
 
   // insert into doc at index
-  // 0
   state.data.doc.blocks.splice(index, 0, newBlock);
+
+  // reload doc
+  loadDoc(state, state.data.doc);
+};
+
+export const deleteBlockFromDoc = (state, block) => {
+  // find index of block
+  const index = state.data.doc.blocks.indexOf(block);
+
+  // delete block from doc at index
+  state.data.doc.blocks.splice(index, 1);
+
+  // reload doc
+  loadDoc(state, state.data.doc);
+};
+
+export const setPointsMaxInBlock = (state, block, newPointsMax) => {
+  // ensure at least 1 point is set
+  if (newPointsMax < 1) {
+    newPointsMax = 1;
+  }
+
+  // set new points max
+  block.pointsMax = newPointsMax;
+
+  // adapt existing points, if needed
+  if (block.points > newPointsMax) {
+    block.points = newPointsMax;
+  }
 
   // reload doc
   loadDoc(state, state.data.doc);
