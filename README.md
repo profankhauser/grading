@@ -7,7 +7,7 @@ Live at: https://profankhauser.github.io/grading
 ## Documents
 
 A grading can be saved and opened as a JSON file.
-You can have a look at the structure at [docs/default.json]{docs/default.json}.
+You can have a look at the structure at [docs/default.json](docs/default.json).
 
 ```json
 {
@@ -33,6 +33,13 @@ You can have a look at the structure at [docs/default.json]{docs/default.json}.
   ]
 }
 ```
+
+## Data Link
+
+To allow easy sharing of documents, each document maintains a current representation of the doc in the link following the `#` mark.
+This allows to simply copy and share a URL with anybody or bookmark the link.
+
+The part after the `#` mark is simply a [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoded version of the doc stringified as JSON.
 
 ## Block Types
 
