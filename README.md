@@ -34,6 +34,39 @@ You can have a look at the structure at [docs/default.json]{docs/default.json}.
 }
 ```
 
+## Block Types
+
+The following block types are supported:
+
+### Text
+
+A section of markdown text for information.
+
+| Attribute | Value                     | Description                       |
+| --------- | ------------------------- | --------------------------------- |
+| `type`    | `text`                    | Defines the block type to `text`. |
+| `text`    | `Markdown formatted text` | The text to display.              |
+
+### Slider
+
+A section with markdown text for information with a points slider.
+
+| Attribute   | Value                     | Description                                  |
+| ----------- | ------------------------- | -------------------------------------------- |
+| `type`      | `slider`                  | Defines the block type to `slider`.          |
+| `text`      | `Markdown formatted text` | The text to display.                         |
+| `points`    | `5`                       | The points achieved in this block.           |
+| `pointsMax` | `10`                      | The maximum points achievable in this block. |
+
+### Grade
+
+A section of markdown text followed by a grading results table.
+
+| Attribute | Value                     | Description                        |
+| --------- | ------------------------- | ---------------------------------- |
+| `type`    | `grade`                   | Defines the block type to `grade`. |
+| `text`    | `Markdown formatted text` | The text to display.               |
+
 ## Development
 
 Clone the repo and run `./bin/serve` to start a local fileserver
