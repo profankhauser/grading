@@ -6,6 +6,11 @@ export const boot = (state) => {
     recalculateResult(state);
   });
 
+  // update doc on text changes
+  state.addEventListener("block-text-changed", () => {
+    updateDocInURL(state);
+  });
+
   // update url when result changed
   state.addEventListener("result-changed", () => {
     updateDocInURL(state);
