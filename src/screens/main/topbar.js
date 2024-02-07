@@ -27,32 +27,46 @@ export default class GradingScreenMainTopbar extends HTMLElement {
     title.classList.add("topbar-Title");
     title.textContent = "Grading";
     title.addEventListener("click", () => {
-      this._state.openHome();
+      window.scrollTo(0, 0);
     });
     left.appendChild(title);
 
-    // open action
-    const openAction = this._newAction("Open", () => {
-      actions.openFile(this._state);
-    });
-    left.appendChild(openAction);
+    // docs
+    const docsButton = document.createElement("a");
+    docsButton.classList.add("topbar-Button");
+    docsButton.textContent = "Docs";
+    docsButton.href = "https://github.com/profankhauser/grading";
+    left.appendChild(docsButton);
 
-    // save action
-    const saveAction = this._newAction("Save", () => {
-      actions.saveFile(this._state);
-    });
-    left.appendChild(saveAction);
-
-    // reset action
-    const resetAction = this._newAction("Reset", () => {
-      actions.reset(this._state);
-    });
-    left.appendChild(resetAction);
+    // about
+    const aboutButton = document.createElement("a");
+    aboutButton.classList.add("topbar-Button");
+    aboutButton.textContent = "About";
+    aboutButton.href = "https://fankhauser.io";
+    left.appendChild(aboutButton);
 
     // right
     const right = document.createElement("div");
     right.classList.add("topbar-Right");
     page.appendChild(right);
+
+    // open action
+    const openAction = this._newAction("Open", () => {
+      actions.openFile(this._state);
+    });
+    right.appendChild(openAction);
+
+    // save action
+    const saveAction = this._newAction("Save", () => {
+      actions.saveFile(this._state);
+    });
+    right.appendChild(saveAction);
+
+    // reset action
+    const resetAction = this._newAction("Reset", () => {
+      actions.reset(this._state);
+    });
+    right.appendChild(resetAction);
 
     // copy url to clipboard action
     const copyURLAction = this._newAction("Copy URL", () => {

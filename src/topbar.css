@@ -67,6 +67,9 @@
   font-size: 0.9em;
   margin-right: 1px;
   font-weight: 600;
+  line-height: 48px;
+  text-decoration: none;
+  color: black;
 }
 
 .topbar-Button:hover {
